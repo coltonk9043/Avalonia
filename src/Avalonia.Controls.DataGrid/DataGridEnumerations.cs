@@ -50,6 +50,21 @@ namespace Avalonia.Controls
     }
 
     /// <summary>
+    /// Defines the conditions necessary to put a cell in edit mode.
+    /// </summary>
+    public enum CellEditMode
+    {
+        /// <summary>
+        /// A cell's parent <seealso cref="DataGridRow"/> must be selected before it is able to be put in edit mode
+        /// </summary>
+        Default,
+        /// <summary>
+        /// A cell will be immediately put into edit mode upon being clicked.
+        /// </summary>
+        Immediate,
+    }
+
+    /// <summary>
     /// Determines whether the row/column headers are shown or not.
     /// </summary>
     [Flags]
